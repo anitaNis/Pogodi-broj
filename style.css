@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.row::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+[class*="col-"] {
+  padding: 15px;
+  float: left;
+  border: 1px solid gray;
+}
+header {
+  text-align: center;
+  background-color: rgb(238, 221, 223);
+}
+.game {
+  margin: auto;
+}
+.container10x10 {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  grid-gap: 5px;
+  justify-content: center;
+  perspective: 1000px;
+}
+.container10x10 .card {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  border: 1px solid pink;
+  border-radius: 5px;
+  padding: 5px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+td,
+tr,
+th {
+  border: 1px solid gray;
+  padding: 5px;
+  background-color: rgb(248, 237, 239);
+}
+th,
+.clicked {
+  background-color: rgb(238, 221, 223);
+}
+
+.pogodak {
+  background-color: violet;
+}
+
+footer {
+  background-color: rgb(238, 221, 223);
+  text-align: center;
+}
+.card.flip {
+  transform: rotateY(180deg);
+  background-color: rgb(238, 221, 223);
+  /* visibility: visible; */
+}
+.front-face {
+  width: 100%;
+  height: inherit;
+  margin: auto;
+  padding: 5px;
+  backface-visibility: hidden;
+}
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.col-7,
+.col-5 {
+  border: none;
+}
+@media (max-width: 760px) {
+  [class*="col-"] {
+    padding: 15px;
+    float: none;
+    border: 1px solid gray;
+    width: 100%;
+  }
+}
